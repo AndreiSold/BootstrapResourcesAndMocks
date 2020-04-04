@@ -23,8 +23,10 @@ body {
 
 /*home section*/
 #home-section {
+    background: url(../img/home.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    background: url(../img/home.jpg) no-repeat fixed;
+    background-attachment: fixed;
     min-height: 700px;
 }
 
