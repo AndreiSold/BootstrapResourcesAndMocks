@@ -2,11 +2,18 @@ body {
     background: dimgrey;
 }
 
+/*global*/
+.rounded-corners {
+    border-radius: 10%;
+}
+
+/*navbar*/
 .navbar {
     opacity: 0.8;
     border-bottom: cornflowerblue 3px solid;
 }
 
+/*home section*/
 #home-section {
     background-size: cover;
     background: url(../img/home.jpg) no-repeat fixed;
@@ -22,6 +29,11 @@ body {
     background: rgba(0, 0, 0, 0.7);
 }
 
-.home-inner {
+#home-section .home-inner {
     padding-top: 150px;
 }
+
+#home-section .card {
+    opacity: 0.8;
+}
+
