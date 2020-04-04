@@ -7,6 +7,14 @@ body {
     border-radius: 10%;
 }
 
+.custom-paragraph-size {
+    font-size: 1.2rem;
+}
+
+.text-grey {
+    color: dimgrey;
+}
+
 /*navbar*/
 .navbar {
     opacity: 0.8;
@@ -37,3 +45,15 @@ body {
     opacity: 0.8;
 }
 
+/*explore-section*/
+#explore-section {
+    background-color: #333333;
+}
+
+#explore-connect-section {
+    background-color: white;
+}
+
+#explore-section .jumbotron {
+    background-color: #333333;
+}
