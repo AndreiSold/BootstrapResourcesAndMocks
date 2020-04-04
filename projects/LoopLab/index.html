@@ -13,7 +13,7 @@
     <title>Bootstrap Theme</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#main-nav" id="home">
 
 <!--NAVBAR-->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
@@ -28,13 +28,13 @@
                     <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#explore-head-section" class="nav-link">Explore</a>
+                    <a href="#explore-section" class="nav-link">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#create-head-section" class="nav-link">Create</a>
+                    <a href="#create-section" class="nav-link">Create</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#share-head-section" class="nav-link">Share</a>
+                    <a href="#share-section" class="nav-link">Share</a>
                 </li>
             </ul>
         </div>
@@ -332,6 +332,25 @@
 <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            const hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+                window.location.hash = hash;
+            });
+        }
+    });
 </script>
 </body>
 
