@@ -1,5 +1,70 @@
-$size: 2px;
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/root";
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/type";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/tables";
+@import "../../../node_modules/bootstrap/scss/forms";
+@import "../../../node_modules/bootstrap/scss/buttons";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+$primary: #3292a6;
+$primary-overlay: rgba(50, 146, 166, 0.8);
+
 body {
-  background-color: red;
-  font-size: $size;
+  margin-top: 105px;
 }
+
+.navbar {
+  box-shadow: 2px 2px 5px $primary;
+  opacity: 0.9;
+  background: #fff;
+
+  .nav-item {
+    font-size: 1.4rem;
+    padding-right: 1.4rem;
+  }
+}
+
+//explore section
+#explore-section {
+  background: url(../img/mountains.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 600px;
+  position: relative;
+
+  .blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $primary-overlay;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  #dreamColumn {
+    @include media-breakpoint-down(lg) {
+      margin-top: 100px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 3rem;
+  }
+}
+
+
